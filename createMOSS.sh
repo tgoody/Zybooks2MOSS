@@ -78,4 +78,11 @@ find studentfiles/cpp -name "*${fileName3%.*}*" -exec mv {} MOSSfiles/ \;
 
 fi
 
-./moss.pl -l cc -c $labName ./MOSSfiles/*
+HTMLLINK=$(./moss.pl -l cc -c $labName ./MOSSfiles/* | tail -1)
+
+echo $"LINK IS: \n"
+echo $HTMLLINK
+
+destdir=./STUDENTREPORT.html
+content=$(curl -L $HTMLLINK)
+echo echo "$content" >> "$destdir"
