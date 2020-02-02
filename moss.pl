@@ -9,7 +9,11 @@
 #
 # Feel free to share this script with other instructors of programming
 # classes, but please do not place the script in a publicly accessible
-# place.  Comments, questions, and bug reports should be sent to
+# place.
+
+#No
+
+#Comments, questions, and bug reports should be sent to
 # moss-request@moss.stanford.edu.
 #
 # IMPORTANT: This script is known to work on Unix and on Windows using Cygwin.
