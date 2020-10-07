@@ -11,7 +11,6 @@ cppname=$zipname.cpp
 
 unzip "$f" -d tmp
 
-
 for g in tmp/*.h; do
 finalHeaderName="${g%.h}_$headername"
 #echo "$finalHeaderName"
@@ -38,8 +37,6 @@ done;
 
 done;
 rmdir tmp
-
-read -p 'What assignment is this? (like "Lab3" -- no spaces please)? ' labName
 
 read -p 'What files (up to 3, separated by whitespace) do you want to check for (like "DynamicArray.h")? ' fileName1 fileName2 fileName3
 mkdir MOSSfiles
@@ -78,7 +75,7 @@ find studentfiles/cpp -name "*${fileName3%.*}*" -exec mv {} MOSSfiles/ \;
 
 fi
 
-HTMLLINK=$(./moss.pl -l cc -c $labName ./MOSSfiles/* | tail -1)
+HTMLLINK=$(./moss.pl -l cc ./MOSSfiles/* | tail -1)
 
 echo $"LINK IS: \n"
 echo $HTMLLINK
